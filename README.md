@@ -7,8 +7,6 @@ Backend API built with FastAPI and SQLAlchemy. Supports full CRUD operations, PA
 - Python 3.11+
 - FastAPI
 - SQLAlchemy
-- SQLite / MySQL
-- Pydantic
 - Annotated validation
 
 #Endpoints
@@ -21,7 +19,6 @@ Backend API built with FastAPI and SQLAlchemy. Supports full CRUD operations, PA
 
 #Features
 - Clean architecture
-- JWT-ready structure (optional)
 - Swagger UI for testing
 - Modular codebase
   
