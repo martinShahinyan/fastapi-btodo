@@ -23,7 +23,7 @@ async def create_assignment(
     title1: Annotated[str, Query(title="name of title")],
     status1: Annotated[str, Query(title="status of title (Done,Undone)")],
     estimated_time1: Annotated[int, Query(title="time to complete assignment in hours", ge=1, lt=50)]
-):
+)
     db = SessionLocal()
     new_assignment = Assignments(title=title1, status=status1, estimated_time=estimated_time1)
     db.add(new_assignment)
