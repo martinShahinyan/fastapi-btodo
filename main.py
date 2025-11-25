@@ -87,7 +87,7 @@ async def update_assignment(
     new_title: Annotated[str, Query(title="new title of assignment")],
     new_status: Annotated[str, Query(title="new status of assignment (Done,Undone)")],
     new_estimated_time: Annotated[int, Query(title="new estimated time", ge=1)]
-):
+)
     db = SessionLocal()
     res = db.query(Assignments).filter(Assignments.id == assign_id).first()
     if not res:
