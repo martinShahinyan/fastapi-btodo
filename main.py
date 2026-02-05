@@ -50,7 +50,7 @@ async def show_all_assignments():
         "time to complete assignment": a.estimated_time
     } for a in assignments]
 
-@app.get("/assignment/{assign_id}/")
+@app.get("/assignment/{assign_id}")
 async def assignment_by_id(assign_id: Annotated[int, Path(title="id of assignment", ge=1)]):
     db = SessionLocal()
     res = db.query(Assignments).filter(Assignments.id == assign_id).first()
